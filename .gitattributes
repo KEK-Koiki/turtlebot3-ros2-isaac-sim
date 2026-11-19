@@ -1,0 +1,2 @@
+# Preserve the bytes covered by the original lab manifest on all platforms.
+lab/** -text

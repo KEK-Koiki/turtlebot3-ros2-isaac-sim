@@ -1,0 +1,86 @@
+{
+  "EK_Lab3_00_student_start.usda": {
+    "graphs": []
+  },
+  "EK_Lab3_01_ros_clock.usda": {
+    "graphs": [
+      "/World/ROS_Clock"
+    ]
+  },
+  "EK_Lab3_02_ros_drive.usda": {
+    "graphs": [
+      "/World/ROS_Clock",
+      "/turtlebot3_burger/ROS_Drive",
+      "/Graph/ROS_Clock"
+    ],
+    "/turtlebot3_burger/ROS_Drive/differential_controller": {
+      "inputs:maxAngularSpeed": "1.0",
+      "inputs:maxLinearSpeed": "0.22",
+      "inputs:wheelDistance": "0.16",
+      "inputs:wheelRadius": "0.025"
+    }
+  },
+  "EK_Lab3_03_lidar.usda": {
+    "graphs": [
+      "/World/ROS_Clock",
+      "/turtlebot3_burger/base_scan/Lidar2D/ROS_Lidar2D",
+      "/turtlebot3_burger/ROS_Drive"
+    ],
+    "/turtlebot3_burger/ROS_Drive/differential_controller": {
+      "inputs:maxAngularSpeed": "1.0",
+      "inputs:maxLinearSpeed": "0.22",
+      "inputs:wheelDistance": "0.16",
+      "inputs:wheelRadius": "0.025"
+    },
+    "/turtlebot3_burger/base_scan/Lidar2D": {
+      "xformOp:translate": "(0, 0, 0)"
+    }
+  },
+  "EK_Lab3_04_camera.usda": {
+    "graphs": [
+      "/World/ROS_Clock",
+      "/turtlebot3_burger/base_footprint/Camera_1/ROS_Camera",
+      "/turtlebot3_burger/base_scan/Lidar2D/ROS_Lidar2D",
+      "/turtlebot3_burger/ROS_Drive"
+    ],
+    "/turtlebot3_burger/ROS_Drive/differential_controller": {
+      "inputs:maxAngularSpeed": "1.0",
+      "inputs:maxLinearSpeed": "0.22",
+      "inputs:wheelDistance": "0.16",
+      "inputs:wheelRadius": "0.025"
+    },
+    "/turtlebot3_burger/base_scan/Lidar2D": {
+      "xformOp:translate": "(0, 0, 0)"
+    },
+    "/turtlebot3_burger/base_footprint/Camera_1": {
+      "xformOp:rotateXYZ": "(90, 0, -90)",
+      "xformOp:translate": "(0.1, 0, 0.2)"
+    }
+  },
+  "EK_Lab3_05_odometry_tf.usda": {
+    "graphs": [
+      "/World/ROS_Clock",
+      "/turtlebot3_burger/base_footprint/Camera_1/ROS_Camera",
+      "/turtlebot3_burger/base_scan/Lidar2D/ROS_Lidar2D",
+      "/turtlebot3_burger/ROS_Drive",
+      "/turtlebot3_burger/ROS_OdomTF"
+    ],
+    "/turtlebot3_burger/ROS_Drive/differential_controller": {
+      "inputs:maxAngularSpeed": "1.0",
+      "inputs:maxLinearSpeed": "0.22",
+      "inputs:wheelDistance": "0.16",
+      "inputs:wheelRadius": "0.025"
+    },
+    "/turtlebot3_burger/base_scan/Lidar2D": {
+      "xformOp:translate": "(0, 0, 0)"
+    },
+    "/turtlebot3_burger/base_footprint/Camera_1": {
+      "xformOp:rotateXYZ": "(90, 0, -90)",
+      "xformOp:translate": "(0.1, 0, 0.2)"
+    },
+    "/turtlebot3_burger/ROS_OdomTF/PublishOdomTF": {
+      "inputs:childFrameId": "base_footprint",
+      "inputs:parentFrameId": "odom"
+    }
+  }
+}

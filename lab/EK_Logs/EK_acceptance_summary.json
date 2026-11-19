@@ -1,0 +1,9 @@
+{
+  "received_all_required_streams": true,
+  "tf_connected": true,
+  "no_world_to_odom": true,
+  "forward_distance_m": 0.3605532438208673,
+  "yaw_change_rad": 1.0588756629909648,
+  "stop_drift_m": 5.96053984490917e-08,
+  "motion_pass": true
+}
