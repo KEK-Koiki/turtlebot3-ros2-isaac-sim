@@ -6,7 +6,7 @@ A robotics systems integration project by **Elijah Koiki**, developed from the R
 
 **Stack:** NVIDIA Isaac Sim 6.0.1 · ROS 2 Jazzy · Python · OmniGraph · OpenUSD · RViz2 · Fast DDS
 
-[Demo video](lab/EK_Video/EK_Demonstration.mp4) · [Engineering notes](docs/engineering-notes.md) · [Run the project](docs/reproduction.md) · [Validation evidence](docs/validation.md)
+[Demo video](lab/EK_Video/EK_Demonstration.mp4) · [Engineering notes](docs/engineering-notes.md) · [Reproduction notes](docs/reproduction.md) · [Validation evidence](docs/validation.md)
 
 ![TurtleBot3 running in the packaged Isaac Sim room](lab/EK_Evidence/EK_F_final_running_scene.png)
 
